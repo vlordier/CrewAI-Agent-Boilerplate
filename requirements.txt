@@ -1,0 +1,7 @@
+crewai==0.28.8
+crewai-tools==0.1.7
+langchain-community==0.0.32
+langchain_community==0.0.32
+pytest>=8.1.1
+youtube-transcript-api>=0.6.2
+youtube_search==2.1.2
