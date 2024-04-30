@@ -1,29 +1,28 @@
-name: Pre-Commit
+name: Python application
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
-  pre-commit:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
+
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v2
       with:
-        python-version: '3.12'  # Specify your desired Python version
+        python-version: 3.11.5
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install pre-commit vale mypy pylint
-
-    - name: Copy the pre-commit config file
-      run: cp .pre-commit-config.yaml ./.git/hooks/pre-commit
+        pip install pre-commit vale mypy
 
     - name: Install mypy types
       run: mypy --install-types --non-interactive
