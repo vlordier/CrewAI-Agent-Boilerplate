@@ -1,0 +1,3 @@
+[submodule ".vale/Google"]
+	path = .vale/Google
+	url = https://github.com/errata-ai/Google.git
