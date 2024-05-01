@@ -1,6 +1,8 @@
 crewai==0.28.8
 crewai-tools==0.1.7
+dotenv==0.19.1
 langchain_community==0.0.34
+langchain_openai==0.0.34
 pyyaml==6.0.1
 youtube-transcript-api>=0.6.2
 youtube_search==2.1.2

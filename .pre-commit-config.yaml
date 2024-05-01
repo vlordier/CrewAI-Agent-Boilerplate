@@ -50,6 +50,11 @@ repos:
   - id: nbqa-isort
     args: [--float-to-top]
 
+- repo: https://github.com/RobertCraigie/pyright-python
+  rev: v1.1.360
+  hooks:
+  - id: pyright
+
 - repo: https://github.com/pycqa/isort
   rev: 5.12.0
   hooks:
@@ -128,23 +133,6 @@ repos:
   - id: shellcheck
     args: [--shell=bash]      # Adjust this if you're using a different shell
 
-- repo: https://github.com/scop/pre-commit-shfmt
-  rev: v3.7.0-4
-  hooks:
-      # Choose one of:
-  - id: shfmt             # native (requires/installs Go to build)
-
-- repo: local
-  hooks:
-  - id: pylint
-    name: pylint
-    entry: pylint
-    language: system
-    exclude: '[a-zA-Z]*/(migrations)/(.)*'
-    types: [python]
-    args: [-rn, -sn]
-
-
 - repo: https://github.com/pycqa/bandit
   rev: 1.7.5
   hooks:
@@ -155,4 +143,4 @@ repos:
   rev: 6.1.0
   hooks:
   - id: flake8
-    additional_dependencies: [flake8-bugbear, flake8-comprehensions, flake8-mutable, flake8-print, flake8-simplify]
+    additional_dependencies: [flake8-bugbear, flake8-comprehensions, flake8-mutable, flake8-print, flake8-simplify, flake8-docstrings-complete]
