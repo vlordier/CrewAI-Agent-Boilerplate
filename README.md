@@ -1,5 +1,9 @@
 #  Boilerplate CrewAI + AgentRun
 
+##  Package managment
+We use `uv`  
+Run `uv venv` then `uv pip install -r requirements[_dev].txt`
+
 ##  Design
 Leverage [CrewAI Chat with Docs](https://chat.openai.com/g/g-qqTuUWsBY-crewai-assistant)
 
@@ -20,4 +24,5 @@ Tests are in `tests`
 Run `pytest`
 
 ## Github Actions
-GitHub actions running `pre-commit` hooks and `pytest` are setup in `.github/workflows`
+GitHub actions running `pre-commit` hooks and `pytest` are setup in `.github/workflows`  
+You can run them locally using `act` see [here](https://github.com/nektos/act)
