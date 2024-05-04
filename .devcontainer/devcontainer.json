@@ -1,6 +1,6 @@
 {
 	"name": "Python 3",
-	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/act:1": {
 			"version": "latest"
@@ -25,5 +25,5 @@
 			"dockerDashComposeVersion": "latest"
 		}
 	},
-	"postCreateCommand": "uv venv && uv pip install -r requirements.txt requirements_dev.txt"
+	"postCreateCommand": "pip install -r requirements.txt -r requirements_dev.txt"
 }
