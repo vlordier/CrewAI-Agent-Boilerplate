@@ -1,0 +1,27 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[tool.poetry]
+authors = ["Vincent Lordier <vlordier@users.noreply.github.com>"]
+description = "crew_blog using crewAI"
+name = "crew-blog"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+agentops = "^0.1.8"
+agentrun = "^0.2.3"
+crewai = {extras = ["tools"], version = "^0.30.0rc6"}
+langchain-community = "^0.0.36"
+python = ">=3.10,<=3.12"
+python-dotenv = "^1.0.1"
+youtube-transcript-api = "^0.6.2"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.0"
+pytest = "^8.2.0"
+vale = "^3.4.1.0"
+
+[tool.poetry.scripts]
+crew_blog = "main:run"

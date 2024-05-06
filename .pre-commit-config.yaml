@@ -3,7 +3,7 @@ ci:
 
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.5.0
+  rev: v4.6.0
   hooks:
   - id: check-added-large-files
     args: [--maxkb=99000]
@@ -34,13 +34,13 @@ repos:
   - id: dead
 
 - repo: https://github.com/PyCQA/autoflake
-  rev: v2.2.1
+  rev: v2.3.1
   hooks:
   - id: autoflake
     args: [--remove-unused-variables, --remove-all-unused-imports]
 
 - repo: https://github.com/nbQA-dev/nbQA
-  rev: 1.7.1
+  rev: 1.8.5
   hooks:
   - id: nbqa-black
     args: [--nbqa-shell]
@@ -51,30 +51,30 @@ repos:
     args: [--float-to-top]
 
 - repo: https://github.com/RobertCraigie/pyright-python
-  rev: v1.1.360
+  rev: v1.1.361
   hooks:
   - id: pyright
 
 - repo: https://github.com/pycqa/isort
-  rev: 5.12.0
+  rev: 5.13.2
   hooks:
   - id: isort
     name: isort (python)
     args: [--profile, black]
 
 - repo: https://github.com/psf/black
-  rev: 23.11.0
+  rev: 24.4.2
   hooks:
   - id: black
 
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.1.7
+  rev: v0.4.3
   hooks:
   - id: ruff
     args: [--fix, --exit-non-zero-on-fix, --show-fixes]
 
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v1.7.1
+  rev: v1.10.0
   hooks:
   - id: mypy
     args: [--ignore-missing-imports, --no-implicit-optional, --disallow-untyped-defs]
@@ -102,7 +102,7 @@ repos:
     types: [toml]
 
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.11.0
+  rev: v2.13.0
   hooks:
   - id: pretty-format-toml
     name: Pretty format TOML
@@ -128,19 +128,19 @@ repos:
     stages: [commit]
 
 - repo: https://github.com/koalaman/shellcheck-precommit
-  rev: v0.9.0
+  rev: v0.10.0
   hooks:
   - id: shellcheck
     args: [--shell=bash]      # Adjust this if you're using a different shell
 
 - repo: https://github.com/pycqa/bandit
-  rev: 1.7.5
+  rev: 1.7.8
   hooks:
   - id: bandit
     args: [-iii, -ll]
 
 - repo: https://github.com/pycqa/flake8
-  rev: 6.1.0
+  rev: 7.0.0
   hooks:
   - id: flake8
     additional_dependencies: [flake8-bugbear, flake8-comprehensions, flake8-mutable, flake8-print, flake8-simplify, flake8-docstrings-complete]
