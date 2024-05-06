@@ -62,7 +62,7 @@ Setup `pre-commit` hooks using `pre-commit install`
 Tests are in `tests`  
 Run `pytest`
 
-## Github Actions
+##  Github Actions
 GitHub actions running `pre-commit` hooks and `pytest` are setup in `.github/workflows`  
 You can run them locally using `act` see [here](https://github.com/nektos/act)
 

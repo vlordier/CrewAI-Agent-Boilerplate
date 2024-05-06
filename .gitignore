@@ -166,3 +166,5 @@ cython_debug/
 #.idea/
 .ruff_cache
 .aider*
+
+.DS_Store
