@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import agentops
+
 from crew import CrewBlogCrew
 
 agentops.init(tags="crew_blog")
