@@ -1,15 +1,11 @@
+import os
 from pathlib import Path
 from typing import Any, Dict
 
 import yaml
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-
-# Uncomment the following line to use an example of a custom tool
-# from crew_blog.tools.custom_tool import MyCustomTool
-
-# Check our tools documentations for more information on how to use them
-# from crewai_tools import SerperDevTool
+from langchain_groq import ChatGroq
 
 
 @CrewBase
@@ -38,8 +34,23 @@ class CrewBlogCrew:
             tasks_config_path (str, optional): Path to the tasks configuration file. Defaults to "config/tasks.yaml".
 
         Raises:
+            ValueError: If the GROQ_API_KEY is not set in the .env file
             FileNotFoundError: If the agents or tasks configuration file does not exist
         """
+
+        # get GROQ_API_KEY from .env
+        groq_api_key = os.getenv("GROQ_API_KEY")
+        if groq_api_key is None:
+            raise ValueError("GROQ_API_KEY is not set in .env")
+
+        groq_model_name = os.getenv("GROQ_MODEL_NAME")
+        if groq_model_name is None:
+            raise ValueError("GROQ_MODEL_NAME is not set in .env")
+
+        # Define the model
+        self.llm = ChatGroq(
+            temperature=0, groq_api_key=groq_api_key, model_name=groq_model_name
+        )
 
         # Define the paths
         current_file_path = Path(__file__).parent
@@ -98,6 +109,7 @@ class CrewBlogCrew:
             config=researcher_config,
             # tools=[MyCustomTool()], # Example of custom tool, loaded on the beginning of file
             verbose=True,
+            llm=self.llm,
         )
 
     @agent
@@ -110,7 +122,11 @@ class CrewBlogCrew:
         reporting_analyst_config: Dict[str, Any] = self.agents_config[
             "reporting_analyst"
         ]
-        return Agent(config=reporting_analyst_config, verbose=True)
+        return Agent(
+            config=reporting_analyst_config,
+            verbose=True,
+            llm=self.llm,
+        )
 
     @task
     def research_task(self) -> Task:  # dead: disable
