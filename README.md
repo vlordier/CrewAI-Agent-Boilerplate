@@ -34,7 +34,7 @@ poetry install
 - Modify `src/main.py` to add custom inputs for your agents and tasks
 
 ##  Edits using `aider`
-You can easily generate diffs using [Aider Chat]()
+You can easily generate diffs using [Aider Chat](https://aider.chat/)
 
 
 ## Running the Project

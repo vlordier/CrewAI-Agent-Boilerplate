@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+""" Main module for the crew blog crew """
 import agentops
 
 from crew import CrewBlogCrew

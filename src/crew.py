@@ -1,3 +1,5 @@
+""" CrewBlog crew module """
+
 import os
 from pathlib import Path
 from typing import Any, Dict
@@ -48,9 +50,7 @@ class CrewBlogCrew:
             raise ValueError("GROQ_MODEL_NAME is not set in .env")
 
         # Define the model
-        self.llm = ChatGroq(
-            temperature=0, groq_api_key=groq_api_key, model_name=groq_model_name
-        )
+        self.llm = ChatGroq(temperature=0, model_name=groq_model_name)
 
         # Define the paths
         current_file_path = Path(__file__).parent

@@ -1,6 +1,9 @@
 # virtualenv
 venv/
 
+# Visual Studio Code
+.vscode/
+
 # env files
 .env
 
