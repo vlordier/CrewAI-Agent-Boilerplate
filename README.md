@@ -3,6 +3,8 @@
 ##  Design
 Leverage [CrewAI Chat with Docs](https://chat.openai.com/g/g-qqTuUWsBY-crewai-assistant)
 
+## Inference
+Use OpenAI or Groq  
 
 ##  Installation
 Ensure you have Python >=3.10 <=3.13 installed on your system.  
@@ -30,6 +32,10 @@ poetry install
 - Modify `src/config/tasks.yaml` to define your tasks
 - Modify `src/crew.py` to add your own logic, tools and specific args
 - Modify `src/main.py` to add custom inputs for your agents and tasks
+
+##  Edits using `aider`
+You can easily generate diffs using [Aider Chat]()
+
 
 ## Running the Project
 
