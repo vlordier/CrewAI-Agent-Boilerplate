@@ -20,6 +20,7 @@ python-dotenv = "^1.0.1"
 youtube-transcript-api = "^0.6.2"
 
 [tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.4"
 pre-commit = "^3.7.0"
 pytest = "^8.2.0"
 vale = "^3.4.1.0"

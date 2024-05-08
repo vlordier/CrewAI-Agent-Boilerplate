@@ -1,10 +1,12 @@
 #  Boilerplate CrewAI + AgentRun
 
 ##  Design
-Leverage [CrewAI Chat with Docs](https://chat.openai.com/g/g-qqTuUWsBY-crewai-assistant)
+Leverage [CrewAI Chat with Docs](https://chat.openai.com/g/g-qqTuUWsBY-crewai-assistant)  
 
-## Inference
-Use OpenAI or Groq  
+##  Inference  
+Set OpenAI or (Groq)[https://console.groq.com/keys] API keys in `.env`  
+Or locally using your favorite LLM runtime
+
 
 ##  Installation
 Ensure you have Python >=3.10 <=3.13 installed on your system.  
@@ -55,7 +57,10 @@ The Crew is composed of multiple AI agents, each with unique roles, goals, and t
 These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
 ##  Chat UI
-Run it using `streamlit run src/ui/chat.py`  
+Run it using
+```bash
+streamlit run src/ui/chat.py
+```  
 
 ##  Code executor
 Running code using `agentrun` see [here](https://pypi.org/project/agentrun/)
