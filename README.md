@@ -54,6 +54,9 @@ This example, unmodified, will run the create a `report.md` file with the output
 The Crew is composed of multiple AI agents, each with unique roles, goals, and tools.  
 These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
+##  Chat UI
+Run it using `streamlit run src/ui/chat.py`  
+
 ##  Code executor
 Running code using `agentrun` see [here](https://pypi.org/project/agentrun/)
 
