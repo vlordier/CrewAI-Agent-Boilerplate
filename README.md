@@ -70,7 +70,7 @@ Run it using
 ```bash
 streamlit run src/ui/chat.py
 ```  
-![Image](assets/image.png){:height="50%" width="50%"}
+![Image](assets/image.png)
 
 ##  Code executor
 Running code using `agentrun` see [here](https://pypi.org/project/agentrun/)
@@ -80,11 +80,15 @@ Using [AgentOps](https://www.loom.com/share/cfcaaef8d4a14cc7a974843bda1076bf) to
 
 [![Thumbnail](assets/0e0d2986f3d644a58d1e186dc81cd8b1-with-play.gif)](https://www.loom.com/share/cfcaaef8d4a14cc7a974843bda1076bf)
 
-##  Devcontainers
-Config in `.devcontainer`
+##  Devcontainer
+Config in `.devcontainer` [see docs here](https://code.visualstudio.com/docs/devcontainers/containers)
+![Image](assets/architecture-containers.png)
+
 
 ##  Pre-commit
 Setup `pre-commit` hooks using `pre-commit install`  
+Config in `.pre-commit-config.yaml`  
+[see pre-commit docs here](https://pre-commit.com/)
 
 ## Run tests
 Tests are in `tests`  
