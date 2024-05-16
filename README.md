@@ -72,8 +72,9 @@ streamlit run src/ui/chat.py
 ```  
 ![Image](assets/image.png)
 
-##  Code executor
-Running code using `agentrun` see [here](https://pypi.org/project/agentrun/)
+##  Safe code executor
+Running code safely in a docker container using `agentrun`  
+See [here](https://jonathan-adly.github.io/AgentRun/) for docs
 
 ##  Observability
 Using [AgentOps](https://www.loom.com/share/cfcaaef8d4a14cc7a974843bda1076bf) to track calls
