@@ -78,6 +78,8 @@ Running code using `agentrun` see [here](https://pypi.org/project/agentrun/)
 ##  Observability
 Using [AgentOps](https://www.loom.com/share/cfcaaef8d4a14cc7a974843bda1076bf) to track calls
 
+[![Thumbnail](assets/0e0d2986f3d644a58d1e186dc81cd8b1-with-play.gif)](https://www.loom.com/share/cfcaaef8d4a14cc7a974843bda1076bf)
+
 ##  Devcontainers
 Config in `.devcontainer`
 
