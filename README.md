@@ -1,5 +1,14 @@
 #  Boilerplate CrewAI + AgentRun
 
+##   Learn the basics
+Using [DeepLearning.ai course "Multi AI Agent Systems with CrewAI](https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/)
+
+<center>
+
+<img src="https://img.youtube.com/vi/QtEUU9ppVLU/0.jpg" alt="Video Preview" style="width:60%;">
+
+</center>
+
 ##  Design
 Leverage [CrewAI Chat with Docs](https://chat.openai.com/g/g-qqTuUWsBY-crewai-assistant)  
 
@@ -61,6 +70,7 @@ Run it using
 ```bash
 streamlit run src/ui/chat.py
 ```  
+![Image](assets/image.png){:height="50%" width="50%"}
 
 ##  Code executor
 Running code using `agentrun` see [here](https://pypi.org/project/agentrun/)

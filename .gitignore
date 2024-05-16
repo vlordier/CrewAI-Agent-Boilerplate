@@ -1,3 +1,6 @@
+# local chroma db
+notebooks/db/
+
 # virtualenv
 venv/
 
