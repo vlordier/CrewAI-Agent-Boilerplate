@@ -66,11 +66,15 @@ The Crew is composed of multiple AI agents, each with unique roles, goals, and t
 These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
 ##  Chat UI
+
+We're using `streamlit` with a preview as suggested by @alejandro-ao [here](https://www.youtube.com/watch?v=vhbfs38XmKk)  
+
 Run it using
 ```bash
 streamlit run src/ui/chat.py
 ```  
 ![Image](assets/image.png)
+
 
 ##  Safe code executor
 Running code safely in a docker container using `agentrun`  
